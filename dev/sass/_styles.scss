@@ -1,0 +1,68 @@
+body {
+	font-family: $font-stack;
+	font-size: 18px;
+	line-height: 1.4em;
+	padding-top: 2rem;
+}
+
+a:link, a:visited {
+	color: red;
+	text-decoration: none;
+}
+
+a:active, a:hover, a:focus {
+	border-bottom: 1px solid red;
+}
+
+h1, h2 {
+	text-align: left;
+	font-size: 1.5rem;
+	line-height: 1.3em;
+	padding: 0 0 0 1.5rem;
+}
+
+h3, h4 {
+	margin: 1rem 0rem;
+}
+
+h4 {
+	display: inline-block;
+	border-bottom: 1px solid black;
+}
+
+nav {
+	position: fixed;
+	width: 100%;
+	bottom: 0%;
+	z-index: 1;
+}
+
+nav li {
+	float: left;
+	width: 25%;
+	height: 3rem;
+	line-height: 3rem;
+	text-align: center;
+	background-color: white;
+}
+
+img {
+	display: block;
+	height: 75vh;
+	position: absolute;
+	bottom: 0%;
+	right: 0%;
+}
+
+article {
+	padding: 1.5rem;
+	margin-bottom: 3rem;
+
+	img {
+		display: none;
+	}
+
+	p {
+		margin-bottom: 1.4rem;
+	}
+}
