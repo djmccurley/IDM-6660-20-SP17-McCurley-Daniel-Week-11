@@ -3,6 +3,12 @@ body {
 	font-size: 18px;
 	line-height: 1.4em;
 	padding-top: 2rem;
+	padding-left: 0%;
+
+	@include wide {
+		padding-left: 15%;
+		transition: $animation;
+	}
 }
 
 a:link, a:visited {
@@ -27,7 +33,7 @@ h3, h4 {
 
 h4 {
 	display: inline-block;
-	border-bottom: 1px solid black;
+	border-bottom: $black-border;
 }
 
 nav {
@@ -35,6 +41,13 @@ nav {
 	width: 100%;
 	bottom: 0%;
 	z-index: 1;
+	border-top: $black-border;
+
+	@include tablet {
+		position: static;
+		padding-left: 1.5rem;
+		border-top: none;
+	}
 }
 
 nav li {
@@ -44,6 +57,11 @@ nav li {
 	line-height: 3rem;
 	text-align: center;
 	background-color: white;
+
+	@include tablet {
+		width: auto;
+		padding-right: 2rem;
+	}
 }
 
 img {
@@ -52,17 +70,38 @@ img {
 	position: absolute;
 	bottom: 0%;
 	right: 0%;
+
+	@include wide {
+		height: 90vh;
+		transition: $animation;
+	}
 }
 
 article {
 	padding: 1.5rem;
 	margin-bottom: 3rem;
 
+	@include tablet {
+		max-width: 500px;
+	}
 	img {
 		display: none;
+
+		@include desktop {
+			display: block;
+		}
 	}
 
 	p {
 		margin-bottom: 1.4rem;
+	}
+}
+
+ol li {
+	line-height: 1.4rem;
+	margin-bottom: 1.4rem;
+
+	span {
+		border-bottom: $black-border;
 	}
 }
